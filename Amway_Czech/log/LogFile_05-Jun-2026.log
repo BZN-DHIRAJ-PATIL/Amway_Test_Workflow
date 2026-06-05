@@ -1,0 +1,15 @@
+INFO   05-Jun-2026 14:31:46 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 14:31:46 : Input Folder [/home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/INPUT/] does not contain files to process
+INFO   05-Jun-2026 14:45:46 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 14:45:46 : Input Folder [/home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/INPUT/] does not contain files to process
+INFO   05-Jun-2026 14:48:30 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 14:48:30 : Input Folder [/home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/INPUT/] does not contain files to process
+INFO   05-Jun-2026 14:48:37 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 14:48:37 : Input Folder [/home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/INPUT/] does not contain files to process
+INFO   05-Jun-2026 15:36:47 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 15:36:47 : Input Folder [/home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/INPUT/] does not contain files to process
+INFO   05-Jun-2026 15:40:56 : !----------------------Application Started-------------------!
+INFO   05-Jun-2026 15:40:57 : inserted successfully : insert into AMWAY_DASHBOARD(MARKET_NAME,FILE_NAME,SOURCE,ACCOUNT_NUMBER,OUTPUTFILENAME,STATEMENT_DATE,PROCESSING_DATE,ERROR,CHECKSUM,STATUS,FILETYPE,MERCHANTNUMBER,RECEIPT_LINES,PAYMENT_LINES,RECEIPT_TOTAL,PAYMENT_TOTAL,PROCESSDATE) values('Czech','zestawienie_COD_2025-11-07_338792.xls','null','DCCZ206335017','null','null','05-Jun-26 15:40:57','Current File [zestawienie_COD_2025-11-07_338792.xls] & Processed File [zestawienie_COD_2025-11-07_338792.xls]  are having same data.Last file Processed On : 17-Mar-26 10:33:28','e3abe9f7623ee1725731a1fd8b67012f7ade98ee8e123b363b6f2b1f9d560c25','Duplicate','null','null','null','null','null','null','05-Jun-26')
+INFO   05-Jun-2026 15:40:57 : Database value updated successfully
+ERROR  05-Jun-2026 15:40:57 : CONFIRMED DUPLICATE ::: Checksum e3abe9f7623ee1725731a1fd8b67012f7ade98ee8e123b363b6f2b1f9d560c25 is present in Database. 
+Current File [zestawienie_COD_2025-11-07_338792.xls] & Processed File [zestawienie_COD_2025-11-07_338792.xls]  are having same data.Last file Processed On : 17-Mar-26 10:33:28

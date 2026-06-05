@@ -1,0 +1,7 @@
+INFO   03-Jun-2026 11:25:46 : !----------------------Application Started-------------------!
+INFO   03-Jun-2026 11:25:48 : Input File zestawienie_COD_2026-05-15_338792.xls is of type: DCCZ206335017
+INFO   03-Jun-2026 11:25:48 : Total Number of lines processed 75
+INFO   03-Jun-2026 11:25:48 : Output file [ 15-May-26_DCCZ206335017.csv ] generated sucessfully
+INFO   03-Jun-2026 11:25:48 : inserted successfully : insert into AMWAY_DASHBOARD(MARKET_NAME,FILE_NAME,SOURCE,ACCOUNT_NUMBER,OUTPUTFILENAME,STATEMENT_DATE,PROCESSING_DATE,ERROR,CHECKSUM,STATUS,FILETYPE,MERCHANTNUMBER,RECEIPT_LINES,PAYMENT_LINES,RECEIPT_TOTAL,PAYMENT_TOTAL,PROCESSDATE) values('Czech','zestawienie_COD_2026-05-15_338792.xls','Email []','DCCZ206335017','15-May-26_DCCZ206335017.csv','15-May-26','03-Jun-26 11:25:48','null','a45a15ed35cfba2871a6288ca92e716bd6ad480f6bc9feca84820580b085b542','Success','DCCZ206335017','null','75','1','478663','478663.0','03-Jun-26')
+INFO   03-Jun-2026 11:25:48 : Database value updated successfully
+INFO   03-Jun-2026 11:25:48 : File moved to /home/bznpwrusr/Desktop/Amway_Test/Amway_Czech/SUCCESS/
