@@ -1,0 +1,15 @@
+ INFO 05 Jun, 2026 15:36:41 :  ----------APPLICATION STARTED-MAIL EXTRACTION----------
+ INFO 05 Jun, 2026 15:36:41 :  Connecting to MailBox with SSL Confg. ENABLED
+ INFO 05 Jun, 2026 15:36:42 :  Connected to Mail [testemail@byzan.com]
+ INFO 05 Jun, 2026 15:36:42 :  Total Number of mails scanned 0
+ INFO 05 Jun, 2026 15:36:47 : Mail attachments fetch activity time : 6.10700 seconds.
+ INFO 05 Jun, 2026 15:36:47 : Executing File Conversion Utility.......
+ INFO 05 Jun, 2026 15:40:49 :  ----------APPLICATION STARTED-MAIL EXTRACTION----------
+ INFO 05 Jun, 2026 15:40:49 :  Connecting to MailBox with SSL Confg. ENABLED
+ INFO 05 Jun, 2026 15:40:50 :  Connected to Mail [testemail@byzan.com]
+ INFO 05 Jun, 2026 15:40:50 :  Total Number of mails scanned 1
+ INFO 05 Jun, 2026 15:40:50 :  Fetching attachments for the Date --> Fri Jun 05 15:40:50 IST 2026
+ INFO 05 Jun, 2026 15:40:51 :  Files downloaded :zestawienie_COD_2025-11-07_338792.xls
+ INFO 05 Jun, 2026 15:40:51 :  Files Count : 1  [Mail Received : 05-Jun-2026 03:40:14:PM]
+ INFO 05 Jun, 2026 15:40:56 : Mail attachments fetch activity time : 7.14000 seconds.
+ INFO 05 Jun, 2026 15:40:56 : Executing File Conversion Utility.......
