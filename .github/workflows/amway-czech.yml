@@ -1,1 +1,52 @@
+name: Amway Czech Workflow
 
+on:
+  workflow_dispatch:
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java 8
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+
+      - name: Create Runtime Folders
+        run: |
+          mkdir -p Amway_Czech/INPUT
+          mkdir -p Amway_Czech/OUTPUT
+          mkdir -p Amway_Czech/SUCCESS
+          mkdir -p Amway_Czech/FAILURE
+          mkdir -p Amway_Czech/CONFIRMED_DUPLICATE
+          mkdir -p Amway_Czech/Temp
+          mkdir -p Amway_Czech/OUTPUT_COPY
+          mkdir -p Amway_Czech/CopyOfEncryptedOutput
+          mkdir -p Amway_Czech/log
+          mkdir -p Mail_Czech/Log
+
+      - name: Make Scripts Executable
+        run: |
+          chmod +x Mail_Czech/Run.sh
+          chmod +x Amway_Czech/CRun.sh
+
+      - name: Run Mail Utility
+        run: |
+          cd Mail_Czech
+          ./Run.sh
+
+      - name: Upload Results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: amway-results
+          path: |
+            Amway_Czech/OUTPUT/**
+            Amway_Czech/SUCCESS/**
+            Amway_Czech/FAILURE/**
+            Amway_Czech/log/**
