@@ -1,4 +1,5 @@
 #!/bin/bash
-cd /home/bznpwrusr/Desktop/Amway_Test/Amway_Czech
-java -Duser.timezone=Asia/Kolkata -jar  Czech.jar
 
+cd "$(dirname "$0")"
+
+java -Duser.timezone=Asia/Kolkata -jar Czech.jar
