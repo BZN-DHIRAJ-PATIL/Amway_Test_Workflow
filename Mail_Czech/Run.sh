@@ -1,3 +1,5 @@
 #!/bin/bash
-cd /home/bznpwrusr/Desktop/Amway_Test/Mail_Czech/
+
+cd "$(dirname "$0")"
+
 java -Duser.timezone=Asia/Kolkata -jar FetchEmailAttachment_Czech.jar
