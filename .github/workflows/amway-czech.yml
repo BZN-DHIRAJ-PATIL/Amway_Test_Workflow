@@ -27,6 +27,7 @@ jobs:
           mkdir -p Amway_Czech/Temp
           mkdir -p Amway_Czech/OUTPUT_COPY
           mkdir -p Amway_Czech/CopyOfEncryptedOutput
+          mkdir -p Amway_Czech/AUDIT
           mkdir -p Amway_Czech/log
           mkdir -p Mail_Czech/Log
 
@@ -50,3 +51,5 @@ jobs:
             Amway_Czech/SUCCESS/**
             Amway_Czech/FAILURE/**
             Amway_Czech/log/**
+            Amway_Czech/AUDIT/**
+            
