@@ -41,29 +41,49 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
-      - name: Verify Generated Files
+      - name: Debug File Locations
         if: always()
         run: |
-          echo "===== AUDIT ====="
-          ls -ltr Amway_Czech/AUDIT || true
+          echo "========================================"
+          echo "CURRENT DIRECTORY"
+          echo "========================================"
+          pwd
 
-          echo "===== OUTPUT ====="
-          ls -ltr Amway_Czech/OUTPUT || true
+          echo ""
+          echo "========================================"
+          echo "AMWAY_CZECH CONTENT"
+          echo "========================================"
+          ls -R Amway_Czech || true
 
-          echo "===== SUCCESS ====="
-          ls -ltr Amway_Czech/SUCCESS || true
+          echo ""
+          echo "========================================"
+          echo "MAIL_CZECH CONTENT"
+          echo "========================================"
+          ls -R Mail_Czech || true
 
-          echo "===== FAILURE ====="
-          ls -ltr Amway_Czech/FAILURE || true
-
-          echo "===== LOG ====="
-          ls -ltr Amway_Czech/log || true
-
-          echo "===== ALL AUDIT FILES ====="
-          find . -name "*Audit*" || true
-
-          echo "===== ALL CSV FILES ====="
+          echo ""
+          echo "========================================"
+          echo "ALL CSV FILES"
+          echo "========================================"
           find . -name "*.csv" || true
+
+          echo ""
+          echo "========================================"
+          echo "ALL AUDIT FILES"
+          echo "========================================"
+          find . | grep AUDIT || true
+
+          echo ""
+          echo "========================================"
+          echo "ALL SUCCESS FILES"
+          echo "========================================"
+          find . | grep SUCCESS || true
+
+          echo ""
+          echo "========================================"
+          echo "ALL OUTPUT FILES"
+          echo "========================================"
+          find . | grep OUTPUT || true
 
       - name: Upload Results
         if: always()
@@ -74,5 +94,5 @@ jobs:
             Amway_Czech/OUTPUT/**
             Amway_Czech/SUCCESS/**
             Amway_Czech/FAILURE/**
-            Amway_Czech/log/**
             Amway_Czech/AUDIT/**
+            Amway_Czech/log/**
