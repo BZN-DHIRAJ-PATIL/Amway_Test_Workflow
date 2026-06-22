@@ -41,6 +41,30 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
+      - name: Verify Generated Files
+        if: always()
+        run: |
+          echo "===== AUDIT ====="
+          ls -ltr Amway_Czech/AUDIT || true
+
+          echo "===== OUTPUT ====="
+          ls -ltr Amway_Czech/OUTPUT || true
+
+          echo "===== SUCCESS ====="
+          ls -ltr Amway_Czech/SUCCESS || true
+
+          echo "===== FAILURE ====="
+          ls -ltr Amway_Czech/FAILURE || true
+
+          echo "===== LOG ====="
+          ls -ltr Amway_Czech/log || true
+
+          echo "===== ALL AUDIT FILES ====="
+          find . -name "*Audit*" || true
+
+          echo "===== ALL CSV FILES ====="
+          find . -name "*.csv" || true
+
       - name: Upload Results
         if: always()
         uses: actions/upload-artifact@v4
@@ -52,4 +76,3 @@ jobs:
             Amway_Czech/FAILURE/**
             Amway_Czech/log/**
             Amway_Czech/AUDIT/**
-            
