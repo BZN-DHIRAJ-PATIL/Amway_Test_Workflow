@@ -85,6 +85,20 @@ jobs:
           echo "========================================"
           find . | grep OUTPUT || true
 
+
+      - name: Send Audit File Email
+       uses: dawidd6/action-send-mail@v3
+       with:
+          server_address: smtp.office365.com
+          server_port: 587
+          username: ${{ secrets.MAIL_USER }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Amway Czech Audit File
+          to: testemail@byzan.com
+          from: ${{ secrets.MAIL_USER }}
+          body: Audit file generated successfully. Please find the attached audit file.
+          attachments: Amway_Czech/AUDIT/*.csv
+
       - name: Upload Results
         if: always()
         uses: actions/upload-artifact@v4
