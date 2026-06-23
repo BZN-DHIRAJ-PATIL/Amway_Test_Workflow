@@ -41,30 +41,54 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
+      # - name: Send Audit Mail
+      #   uses: dawidd6/action-send-mail@v3
+      #   with:
+      #      server_address: smtp.gmail.com
+      #      server_port: 465
+      #      secure: true
+
+      #      username: ${{ secrets.MAIL_USER }}
+      #      password: ${{ secrets.MAIL_PASSWORD }}
+
+      #      subject: Amway Czech Audit File
+
+      #      to: testemail@byzan.com
+
+      #      from: dhirajpatil0819@gmail.com
+
+      #      body: |
+      #          Amway Czech batch processing completed successfully.
+
+      #          Please find attached:
+      #          - Audit File
+
+      #      attachments: |
+      #          Amway_Czech/AUDIT/*
+
       - name: Send Audit Mail
         uses: dawidd6/action-send-mail@v3
         with:
-           server_address: smtp.gmail.com
-           server_port: 465
-           secure: true
+         server_address: smtp.gmail.com
+         server_port: 465
+         secure: true
 
-           username: ${{ secrets.MAIL_USER }}
-           password: ${{ secrets.MAIL_PASSWORD }}
+         username: ${{ secrets.MAIL_USER }}
+         password: ${{ secrets.MAIL_PASSWORD }}
 
-           subject: Amway Czech Audit File
+         subject: Amway Czech Audit File
 
-           to: testemail@byzan.com
+         to: testemail@byzan.com
 
-           from: dhirajpatil0819@gmail.com
+         from: GitHub Workflow
 
-           body: |
-               Amway Czech batch processing completed successfully.
+         body: |
+            Amway Czech batch processing completed successfully.
 
-               Please find attached:
-               - Audit File
+            Please find the attached audit file.
 
-           attachments: |
-               Amway_Czech/AUDIT/*
+         attachments: |
+             Amway_Czech/AUDIT/*
 
       - name: Upload Results
         if: always()
