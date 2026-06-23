@@ -53,9 +53,9 @@ jobs:
 
            subject: Amway Czech Audit File
 
-           to: yourname@gmail.com
+           to: testemail@byzan.com
 
-           from: yourname@gmail.com
+           from: dhirajpatil0819@gmail.com
 
            body: |
                Amway Czech batch processing completed successfully.
