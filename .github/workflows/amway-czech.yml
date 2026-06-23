@@ -41,54 +41,10 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
-      - name: Debug File Locations
-        if: always()
-        run: |
-          echo "========================================"
-          echo "CURRENT DIRECTORY"
-          echo "========================================"
-          pwd
-
-          echo ""
-          echo "========================================"
-          echo "AMWAY_CZECH CONTENT"
-          echo "========================================"
-          ls -R Amway_Czech || true
-
-          echo ""
-          echo "========================================"
-          echo "MAIL_CZECH CONTENT"
-          echo "========================================"
-          ls -R Mail_Czech || true
-
-          echo ""
-          echo "========================================"
-          echo "ALL CSV FILES"
-          echo "========================================"
-          find . -name "*.csv" || true
-
-          echo ""
-          echo "========================================"
-          echo "ALL AUDIT FILES"
-          echo "========================================"
-          find . | grep AUDIT || true
-
-          echo ""
-          echo "========================================"
-          echo "ALL SUCCESS FILES"
-          echo "========================================"
-          find . | grep SUCCESS || true
-
-          echo ""
-          echo "========================================"
-          echo "ALL OUTPUT FILES"
-          echo "========================================"
-          find . | grep OUTPUT || true
-
-
       - name: Send Audit File Email
-       uses: dawidd6/action-send-mail@v3
-       with:
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
           server_address: smtp.office365.com
           server_port: 587
           username: ${{ secrets.MAIL_USER }}
@@ -96,7 +52,9 @@ jobs:
           subject: Amway Czech Audit File
           to: testemail@byzan.com
           from: ${{ secrets.MAIL_USER }}
-          body: Audit file generated successfully. Please find the attached audit file.
+          body: |
+            Audit file generated successfully.
+            Please find the attached audit file.
           attachments: Amway_Czech/AUDIT/*.csv
 
       - name: Upload Results
