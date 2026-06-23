@@ -44,26 +44,27 @@ jobs:
       - name: Send Audit Mail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.rediffmailpro.com
-          server_port: 587
+           server_address: smtp.gmail.com
+           server_port: 465
+           secure: true
 
-          username: ${{ secrets.MAIL_USER }}
-          password: ${{ secrets.MAIL_PASSWORD }}
+           username: ${{ secrets.MAIL_USER }}
+           password: ${{ secrets.MAIL_PASSWORD }}
 
-          subject: Amway Czech Audit File
+           subject: Amway Czech Audit File
 
-          to: testemail@byzan.com
+           to: yourname@gmail.com
 
-          from: testemail@byzan.com
+           from: yourname@gmail.com
 
-          body: |
-            Amway Czech batch processing completed successfully.
+           body: |
+               Amway Czech batch processing completed successfully.
 
-            Please find attached:
-            - Audit File
+               Please find attached:
+               - Audit File
 
-          attachments: |
-            Amway_Czech/AUDIT/*
+           attachments: |
+               Amway_Czech/AUDIT/*
 
       - name: Upload Results
         if: always()
