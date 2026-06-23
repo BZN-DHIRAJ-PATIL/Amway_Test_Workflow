@@ -44,9 +44,8 @@ jobs:
       - name: Send Audit Mail
         uses: dawidd6/action-send-mail@v3
         with:
-          server_address: smtp.gmail.com
-          server_port: 465
-          secure: true
+          server_address: smtp.rediffmailpro.com
+          server_port: 587
 
           username: ${{ secrets.MAIL_USER }}
           password: ${{ secrets.MAIL_PASSWORD }}
@@ -55,7 +54,7 @@ jobs:
 
           to: testemail@byzan.com
 
-          from: GitHub Workflow
+          from: testemail@byzan.com
 
           body: |
             Amway Czech batch processing completed successfully.
