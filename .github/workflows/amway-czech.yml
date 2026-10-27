@@ -95,7 +95,7 @@ jobs:
           body: |
             Amway Czech batch processing completed successfully.
             Please find attached the original input file and generated output CSV.
-          attachments: Amway_Czech/SUCCESS/*,Amway_Czech/OUTPUT/*
+          attachments: Amway_Czech/SUCCESS/*,Amway_Czech/FAILURE/*,Amway_Czech/OUTPUT/*
 
 
       - name: Upload Results
