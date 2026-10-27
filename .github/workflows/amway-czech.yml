@@ -78,7 +78,7 @@ jobs:
           password: ${{ secrets.MAIL_PASSWORD }}
           subject: Amway Czech - Input and Output Files
           to: testemail@byzan.com
-          from: ${{ secrets.MAIL_USER }}
+          from: GitHub Workflow
           body: |
             Amway Czech batch processing completed successfully.
             Please find attached the original input file and generated output CSV.
