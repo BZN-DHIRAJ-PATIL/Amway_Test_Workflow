@@ -66,11 +66,8 @@ jobs:
       #      attachments: |
       #          Amway_Czech/AUDIT/*
 
-      - name: Send Audit Mail
-        uses: dawidd6/action-send-mail@v3
-        with:
-         server_address: smtp.gmail.com
-          - name: Send Input and Output Files
+      
+      - name: Send Input and Output Files
         if: success()
         uses: dawidd6/action-send-mail@v3
         with:
@@ -83,19 +80,12 @@ jobs:
           to: testemail@byzan.com
           from: ${{ secrets.MAIL_USER }}
           body: |
-            Hello,
-
             Amway Czech batch processing completed successfully.
-
-            Please find attached:
-            - Original input file
-            - Generated output CSV file
-
-            Thanks,
-            Amway Czech Workflow
+            Please find attached the original input file and generated output CSV.
           attachments: |
-            Amway_Czech/INPUT/*
+            Amway_Czech/SUCCESS/*
             Amway_Czech/OUTPUT/*
+
 
       - name: Upload Results
         if: always()
