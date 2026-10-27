@@ -70,25 +70,32 @@ jobs:
         uses: dawidd6/action-send-mail@v3
         with:
          server_address: smtp.gmail.com
-         server_port: 465
-         secure: true
+          - name: Send Input and Output Files
+        if: success()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 465
+          secure: true
+          username: ${{ secrets.MAIL_USER }}
+          password: ${{ secrets.MAIL_PASSWORD }}
+          subject: Amway Czech - Input and Output Files
+          to: testemail@byzan.com
+          from: ${{ secrets.MAIL_USER }}
+          body: |
+            Hello,
 
-         username: ${{ secrets.MAIL_USER }}
-         password: ${{ secrets.MAIL_PASSWORD }}
-
-         subject: Amway Czech Audit File
-
-         to: testemail@byzan.com
-
-         from: GitHub Workflow
-
-         body: |
             Amway Czech batch processing completed successfully.
 
-            Please find the attached audit file.
+            Please find attached:
+            - Original input file
+            - Generated output CSV file
 
-         attachments: |
-             Amway_Czech/AUDIT/*
+            Thanks,
+            Amway Czech Workflow
+          attachments: |
+            Amway_Czech/INPUT/*
+            Amway_Czech/OUTPUT/*
 
       - name: Upload Results
         if: always()
