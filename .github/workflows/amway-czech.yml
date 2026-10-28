@@ -44,6 +44,26 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
+      - name: Diagnose Input Folder
+        if: always()
+        run: |
+          echo "=== Working Directory ==="
+          pwd
+
+          echo "=== Amway Czech Folder ==="
+          ls -lah Amway_Czech/
+
+          echo "=== Input Folder ==="
+          if [ -d Amway_Czech/INPUT ]; then
+            echo "INPUT folder exists"
+            ls -lah Amway_Czech/INPUT/
+          else
+            echo "INPUT folder DOES NOT EXIST"
+          fi
+
+          echo "=== Files in Amway Czech ==="
+          find Amway_Czech -maxdepth 3 -type f -print
+
       - name: Check Input Files
         if: always()
         run: |
