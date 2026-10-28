@@ -1,0 +1,6 @@
+ INFO 28 Oct, 2026 13:32:33 :  ----------APPLICATION STARTED-MAIL EXTRACTION----------
+ INFO 28 Oct, 2026 13:32:33 :  Connecting to MailBox with SSL Confg. ENABLED
+ INFO 28 Oct, 2026 13:32:38 :  Connected to Mail [testemail@byzan.com]
+ INFO 28 Oct, 2026 13:32:38 :  Total Number of mails scanned 0
+ INFO 28 Oct, 2026 13:32:44 : Mail attachments fetch activity time : 11.09100 seconds.
+ INFO 28 Oct, 2026 13:32:44 : Executing File Conversion Utility.......

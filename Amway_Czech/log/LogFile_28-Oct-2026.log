@@ -1,0 +1,5 @@
+INFO   28-Oct-2026 13:32:44 : !----------------------Application Started-------------------!
+ERROR  28-Oct-2026 13:32:44 : Error Message Failed to identify BankAccountName/Number for Input file .gitkeep
+ERROR  28-Oct-2026 13:32:44 : File moved to failure folder FAILURE/
+INFO   28-Oct-2026 13:32:44 : DB disabled - skipping insertManageRecordsInDb for file: .gitkeep
+INFO   28-Oct-2026 13:32:44 : Database value updated successfully
