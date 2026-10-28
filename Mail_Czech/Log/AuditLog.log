@@ -25,3 +25,10 @@
  INFO 28 Oct, 2026 13:46:13 :  Fetching attachments for the Date --> Wed Oct 28 13:46:12 IST 2026
  INFO 28 Oct, 2026 13:46:18 : Mail attachments fetch activity time : 9.01400 seconds.
  INFO 28 Oct, 2026 13:46:18 : Executing File Conversion Utility.......
+ INFO 28 Oct, 2026 13:48:24 :  ----------APPLICATION STARTED-MAIL EXTRACTION----------
+ INFO 28 Oct, 2026 13:48:24 :  Connecting to MailBox with SSL Confg. ENABLED
+ INFO 28 Oct, 2026 13:48:28 :  Connected to Mail [testemail@byzan.com]
+ INFO 28 Oct, 2026 13:48:29 :  Total Number of mails scanned 4
+ INFO 28 Oct, 2026 13:48:29 :  Fetching attachments for the Date --> Wed Oct 28 13:48:28 IST 2026
+ INFO 28 Oct, 2026 13:48:33 : Mail attachments fetch activity time : 8.85900 seconds.
+ INFO 28 Oct, 2026 13:48:33 : Executing File Conversion Utility.......
