@@ -1,3 +1,4 @@
+
 name: Amway Czech Workflow
 
 on:
@@ -44,89 +45,6 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
-      - name: Locate Downloaded Attachments
-        if: always()
-        run: |
-          echo "=== Mail Czech files ==="
-          find Mail_Czech -maxdepth 5 -type f -print
-
-          echo "=== All XML and Excel files ==="
-          find . -type f \( -iname "*.xml" -o -iname "*.xlsx" -o -iname "*.xls" \) -print
-
-      - name: Diagnose Input Folder
-        if: always()
-        run: |
-          echo "=== Working Directory ==="
-          pwd
-
-          echo "=== Amway Czech Folder ==="
-          ls -lah Amway_Czech/
-
-          echo "=== Input Folder ==="
-          if [ -d Amway_Czech/INPUT ]; then
-            echo "INPUT folder exists"
-            ls -lah Amway_Czech/INPUT/
-          else
-            echo "INPUT folder DOES NOT EXIST"
-          fi
-
-          echo "=== Files in Amway Czech ==="
-          find Amway_Czech -maxdepth 3 -type f -print
-
-      - name: Check Input Files
-        if: always()
-        run: |
-          echo "=== Current Directory ==="
-          pwd
-
-          echo "=== All Files in Repository Workspace ==="
-          find . -type f -print
-
-          echo "=== Amway Czech Input ==="
-          ls -lah Amway_Czech/INPUT/
-
-          echo "=== Mail Czech Input ==="
-          ls -lah Mail_Czech/INPUT/ 2>/dev/null || true
-
-      # - name: Send Audit Mail
-      #   uses: dawidd6/action-send-mail@v3
-      #   with:
-      #      server_address: smtp.gmail.com
-      #      server_port: 465
-      #      secure: true
-
-      #      username: ${{ secrets.MAIL_USER }}
-      #      password: ${{ secrets.MAIL_PASSWORD }}
-
-      #      subject: Amway Czech Audit File
-
-      #      to: testemail@byzan.com
-
-      #      from: dhirajpatil0819@gmail.com
-
-      #      body: |
-      #          Amway Czech batch processing completed successfully.
-
-      #          Please find attached:
-      #          - Audit File
-
-      #      attachments: |
-      #          Amway_Czech/AUDIT/*
-       
-      - name: Debug Email Attachments
-       
-        if: always()
-        run: |
-          echo "=== SUCCESS folder ==="
-          find Amway_Czech/SUCCESS -maxdepth 2 -type f -print
-
-          echo "=== OUTPUT folder ==="
-          find Amway_Czech/OUTPUT -maxdepth 2 -type f -print
-
-          echo "=== INPUT folder ==="
-          find Amway_Czech/INPUT -maxdepth 2 -type f -print
-          
-      
       - name: Send Input and Output Files
         if: success()
         uses: dawidd6/action-send-mail@v3
@@ -144,8 +62,6 @@ jobs:
             Please find attached the original input file and generated output CSV.
           attachments: Amway_Czech/SUCCESS/*,Amway_Czech/FAILURE/*,Amway_Czech/OUTPUT/*
 
-
-      
       - name: Commit and Push Generated Files
         if: always()
         run: |
@@ -169,8 +85,6 @@ jobs:
           else
             echo "No file changes to commit."
           fi
-
-
 
       - name: Upload Results
         if: always()
