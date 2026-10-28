@@ -3,6 +3,9 @@ name: Amway Czech Workflow
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   process:
     runs-on: ubuntu-latest
