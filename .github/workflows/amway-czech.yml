@@ -98,6 +98,33 @@ jobs:
           attachments: Amway_Czech/SUCCESS/*,Amway_Czech/FAILURE/*,Amway_Czech/OUTPUT/*
 
 
+      
+      - name: Commit and Push Generated Files
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add -f Amway_Czech/INPUT/ \
+                     Amway_Czech/OUTPUT/ \
+                     Amway_Czech/SUCCESS/ \
+                     Amway_Czech/FAILURE/ \
+                     Amway_Czech/CONFIRMED_DUPLICATE/ \
+                     Amway_Czech/OUTPUT_COPY/ \
+                     Amway_Czech/CopyOfEncryptedOutput/ \
+                     Amway_Czech/AUDIT/ \
+                     Amway_Czech/log/ \
+                     Mail_Czech/Log/
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Store Amway Czech workflow results"
+            git push
+          else
+            echo "No file changes to commit."
+          fi
+
+
+
       - name: Upload Results
         if: always()
         uses: actions/upload-artifact@v4
