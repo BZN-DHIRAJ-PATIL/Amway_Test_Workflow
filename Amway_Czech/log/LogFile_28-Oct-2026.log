@@ -7,3 +7,8 @@ INFO   28-Oct-2026 13:37:28 : !----------------------Application Started--------
 INFO   28-Oct-2026 13:37:28 : Input Folder [INPUT/] does not contain files to process
 INFO   28-Oct-2026 13:39:05 : !----------------------Application Started-------------------!
 INFO   28-Oct-2026 13:39:05 : Input Folder [INPUT/] does not contain files to process
+INFO   28-Oct-2026 13:46:18 : !----------------------Application Started-------------------!
+ERROR  28-Oct-2026 13:46:18 : Error Message Failed to identify BankAccountName/Number for Input file .gitkeep
+ERROR  28-Oct-2026 13:46:18 : File moved to failure folder FAILURE/
+INFO   28-Oct-2026 13:46:18 : DB disabled - skipping insertManageRecordsInDb for file: .gitkeep
+INFO   28-Oct-2026 13:46:18 : Database value updated successfully
