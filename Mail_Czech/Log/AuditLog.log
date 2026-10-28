@@ -55,3 +55,12 @@
  INFO 28 Oct, 2026 14:59:54 :  Files Count : 1  [Mail Received : 28-Oct-2026 02:58:58:PM]
  INFO 28 Oct, 2026 14:59:59 : Mail attachments fetch activity time : 15.65900 seconds.
  INFO 28 Oct, 2026 14:59:59 : Executing File Conversion Utility.......
+ INFO 28 Oct, 2026 15:54:46 :  ----------APPLICATION STARTED-MAIL EXTRACTION----------
+ INFO 28 Oct, 2026 15:54:46 :  Connecting to MailBox with SSL Confg. ENABLED
+ INFO 28 Oct, 2026 15:54:50 :  Connected to Mail [testemail@byzan.com]
+ INFO 28 Oct, 2026 15:54:50 :  Total Number of mails scanned 8
+ INFO 28 Oct, 2026 15:54:50 :  Fetching attachments for the Date --> Wed Oct 28 15:54:50 IST 2026
+ INFO 28 Oct, 2026 15:54:57 :  Files downloaded :zestawienie_COD_2025-02-07_338796.xls
+ INFO 28 Oct, 2026 15:54:57 :  Files Count : 1  [Mail Received : 28-Oct-2026 03:53:59:PM]
+ INFO 28 Oct, 2026 15:55:02 : Mail attachments fetch activity time : 15.62600 seconds.
+ INFO 28 Oct, 2026 15:55:02 : Executing File Conversion Utility.......

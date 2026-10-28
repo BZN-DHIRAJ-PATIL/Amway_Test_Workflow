@@ -26,3 +26,11 @@ INFO   28-Oct-2026 14:59:59 : Output file [ 28-Mar-25_DCCZ206335017.csv ] genera
 INFO   28-Oct-2026 14:59:59 : DB disabled - skipping insertManageRecordsInDb for file: zestawienie_COD_2025-03-28_338796.xls
 INFO   28-Oct-2026 14:59:59 : Database value updated successfully
 INFO   28-Oct-2026 14:59:59 : File moved to SUCCESS/
+INFO   28-Oct-2026 15:55:02 : !----------------------Application Started-------------------!
+INFO   28-Oct-2026 15:55:02 : DB disabled - skipping isFileAlreadyProcesssed check.
+INFO   28-Oct-2026 15:55:02 : Input File zestawienie_COD_2025-02-07_338796.xls is of type: DCCZ206335017
+INFO   28-Oct-2026 15:55:02 : Total Number of lines processed 69
+INFO   28-Oct-2026 15:55:02 : Output file [ 07-Feb-25_DCCZ206335017.csv ] generated sucessfully
+INFO   28-Oct-2026 15:55:02 : DB disabled - skipping insertManageRecordsInDb for file: zestawienie_COD_2025-02-07_338796.xls
+INFO   28-Oct-2026 15:55:02 : Database value updated successfully
+INFO   28-Oct-2026 15:55:02 : File moved to SUCCESS/
