@@ -44,6 +44,15 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
+      - name: Locate Downloaded Attachments
+        if: always()
+        run: |
+          echo "=== Mail Czech files ==="
+          find Mail_Czech -maxdepth 5 -type f -print
+
+          echo "=== All XML and Excel files ==="
+          find . -type f \( -iname "*.xml" -o -iname "*.xlsx" -o -iname "*.xls" \) -print
+
       - name: Diagnose Input Folder
         if: always()
         run: |
