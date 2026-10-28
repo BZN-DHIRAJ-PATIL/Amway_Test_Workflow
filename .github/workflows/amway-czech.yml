@@ -44,6 +44,21 @@ jobs:
           cd Mail_Czech
           ./Run.sh
 
+      - name: Check Input Files
+        if: always()
+        run: |
+          echo "=== Current Directory ==="
+          pwd
+
+          echo "=== All Files in Repository Workspace ==="
+          find . -type f -print
+
+          echo "=== Amway Czech Input ==="
+          ls -lah Amway_Czech/INPUT/
+
+          echo "=== Mail Czech Input ==="
+          ls -lah Mail_Czech/INPUT/ 2>/dev/null || true
+
       # - name: Send Audit Mail
       #   uses: dawidd6/action-send-mail@v3
       #   with:
