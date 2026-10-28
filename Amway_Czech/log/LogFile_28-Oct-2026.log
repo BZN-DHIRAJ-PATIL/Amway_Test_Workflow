@@ -3,3 +3,5 @@ ERROR  28-Oct-2026 13:32:44 : Error Message Failed to identify BankAccountName/N
 ERROR  28-Oct-2026 13:32:44 : File moved to failure folder FAILURE/
 INFO   28-Oct-2026 13:32:44 : DB disabled - skipping insertManageRecordsInDb for file: .gitkeep
 INFO   28-Oct-2026 13:32:44 : Database value updated successfully
+INFO   28-Oct-2026 13:37:28 : !----------------------Application Started-------------------!
+INFO   28-Oct-2026 13:37:28 : Input Folder [INPUT/] does not contain files to process
